@@ -23,30 +23,11 @@ function Home() {
                         <td>+91-23456789</td>
                         <td>26</td>
                         <td>
-                            <button className='btn btn-primary'>Edit</button>
-                            <button className='btn btn-danger'>Delete</button>
+                        <Link className='btn btn-primary' to='/update'>Edit</Link>
+                        <button className='btn btn-danger'>Delete</button>
                         </td>
                     </tr>
-                    <tr>
-                        <td>Sofik</td>
-                        <td>M.Tech</td>
-                        <td>+91-23456789</td>
-                        <td>26</td>
-                        <td>
-                            <button className='btn btn-primary'>Edit</button>
-                            <button className='btn btn-danger'>Delete</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Sofik</td>
-                        <td>M.Tech</td>
-                        <td>+91-23456789</td>
-                        <td>26</td>
-                        <td>
-                            <button className='btn btn-primary'>Edit</button>
-                            <button className='btn btn-danger'>Delete</button>
-                        </td>
-                    </tr>
+                   
                 </tbody>
             </table>
         </div>
