@@ -9,6 +9,12 @@ app.use(express.json());
 
 mongoose.connect('mongodb://localhost:27017/crud_operation');
 
+app.get('/',(req,res)=>{
+    studentModel.find({})
+    .then(result => res.json(result))
+    .catch(err => res.json(err))
+});
+
 app.post('/create',(req,res)=>{
     studentModel.create(req.body)
     .then(result => res.json(result))
