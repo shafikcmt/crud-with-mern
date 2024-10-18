@@ -33,7 +33,7 @@ function Home() {
                         <td>{student.contact}</td>
                         <td>{student.age}</td>
                         <td>
-                        <Link className='btn btn-primary' to='/update'>Edit</Link>
+                        <Link className='btn btn-primary' to={`/update/${student._id}`}>Edit</Link>
                         <button className='btn btn-danger'>Delete</button>
                         </td>
                     </tr>

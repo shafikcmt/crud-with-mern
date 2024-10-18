@@ -22,6 +22,13 @@ app.post('/create',(req,res)=>{
 
 })
 
+app.get('/fetchData/:id',(req,res)=>{
+    const id = req.params.id;
+    studentModel.findOne({_id:id})
+    .then(result => res.json(result))
+    .catch(err => res.json(err))
+});
+
 app.listen(4001,()=>{
     console.log('Server is Running!!');
 })

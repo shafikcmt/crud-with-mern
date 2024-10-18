@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link,useNavigate } from 'react-router-dom'
 import axios from 'axios';
 
+
 function Create() {
+  const navigate = useNavigate();
 
   const [name,setName] = useState();
   const [email,setEmail] = useState();
@@ -12,7 +14,12 @@ function Create() {
   const studentData = (e) =>{
     e.preventDefault();
     axios.post('http://localhost:4001/create',{name,email,contact,age})
-    .then(result => console.log(result))
+    .then(result => {
+      console.log(result);
+      navigate('/');
+
+    }
+  )
     .catch(err => console.log(err))
   }
 
